@@ -16,6 +16,14 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     @Override
     public void onClick(View v) {
 
+        switch (v.getId()){
+
+            case R.id.btnMain_jugar:
+                openNewActivity(v, pages.GAME);
+
+
+        }
+
     }
 
     private void openNewActivity(View v , pages p){
