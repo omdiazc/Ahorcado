@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Ahorcado</string>
     <string name="mainbtn_jugar">Jugar</string>
+    <string name="title_activity_game">Game</string>
 
 </resources>
