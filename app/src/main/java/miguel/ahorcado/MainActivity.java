@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity  {
     private void createbuttons() {
         // metodo dedicado a definir los botones y su comportamiento
         btnGame=(Button)findViewById(R.id.btnMain_jugar);
+        btnOpciones=(Button)findViewById(R.id.btnMain_opciones);
+        btnScores=(Button)findViewById(R.id.btnMain_scores);
+
 
 
 
@@ -30,15 +33,39 @@ public class MainActivity extends AppCompatActivity  {
             }
         });
 
+        btnOpciones.setOnClickListener(new  View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                openNewActivity(v, pages.OPTIONS);
+            }
+        });
+
+        btnScores.setOnClickListener(new  View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                openNewActivity(v, pages.SCORES);
+            }
+        });
+
     }
 
 
 
 
     private void openNewActivity(View v , pages p){
+        Intent i;
         switch (p){
             case GAME:
-                Intent i = new Intent(this, Game.class );
+                i = new Intent(this, Game.class );
+                startActivity(i);
+                break;
+            case OPTIONS:
+                i = new Intent(this, Options.class );
+                startActivity(i);
+                break;
+
+            case SCORES:
+                i = new Intent(this, Scores.class );
                 startActivity(i);
                 break;
 
@@ -52,8 +79,8 @@ public class MainActivity extends AppCompatActivity  {
 
     }
 
-    private Button btnGame;
+    private Button btnGame, btnOpciones, btnScores;
     private enum pages {
-    GAME;
+    GAME, OPTIONS,SCORES;
     }
 }

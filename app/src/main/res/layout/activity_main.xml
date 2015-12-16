@@ -14,6 +14,25 @@
         android:layout_height="wrap_content"
         android:text="@string/mainbtn_jugar"
         android:id="@+id/btnMain_jugar"
-        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="166dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mainbtn_opciones"
+        android:id="@+id/btnMain_opciones"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/btnMain_jugar"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mainbtn_scores"
+        android:id="@+id/btnMain_scores"
+        android:layout_below="@+id/btnMain_opciones"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp" />
 </RelativeLayout>

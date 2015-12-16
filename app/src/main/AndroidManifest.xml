@@ -18,7 +18,9 @@
         <activity
             android:name=".Game"
             android:label="@string/title_activity_game"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Options" />
+        <activity android:name=".Scores"></activity>
     </application>
 
 </manifest>
